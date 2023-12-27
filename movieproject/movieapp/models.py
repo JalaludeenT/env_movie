@@ -1,0 +1,13 @@
+from django.db import models
+
+
+# Create your models here.
+
+class Movie(models.Model):
+    Name = models.CharField(max_length=250)
+    Description = models.TextField()
+    Year = models.IntegerField()
+    Images = models.ImageField(upload_to='img')
+
+    def __str__(self):
+        return self.Name
